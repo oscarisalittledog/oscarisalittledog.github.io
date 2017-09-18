@@ -10,8 +10,6 @@
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   
-<!--js -->
-  <script>$('.carousel.carousel-slider').carousel({fullWidth: true});</script> 
 
 </head>
 <body>
@@ -35,29 +33,29 @@
     <div class="container">
       <br><br>
       
-     
-  <div class="carousel carousel-slider center" data-indicators="true">
-    <div class="carousel-fixed-item center">
-      <a class="btn waves-effect white grey-text darken-text-2">button</a>
-    </div>
-    <div class="carousel-item red white-text" href="#one!">
-      <h2>First Panel</h2>
-      <p class="white-text">This is your first panel</p>
-    </div>
-    <div class="carousel-item amber white-text" href="#two!">
-      <h2>Second Panel</h2>
-      <p class="white-text">This is your second panel</p>
-    </div>
-    <div class="carousel-item green white-text" href="#three!">
-      <h2>Third Panel</h2>
-      <p class="white-text">This is your third panel</p>
-    </div>
-    <div class="carousel-item blue white-text" href="#four!">
-      <h2>Fourth Panel</h2>
-      <p class="white-text">This is your fourth panel</p>
-    </div>
-  </div>
-        
+    <!--Import jQuery before materialize.js-->
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+
+        <!--Other element insitialisations-->
+        <script type="text/javascript" language="javascript">
+            $( document ).ready(function(){
+
+                $(".button-collapse").sideNav();//mobile screen menu init
+
+                $('.carousel').carousel(); //carousel init
+
+                $('carousel.slider').slider({full_width: true});//slider init
+            });
+
+        </script>
+        <div class="carousel carousel-slider">
+            <a class="carousel-item" href="#one!"><img src="http://lorempixel.com/800/400/food/1"></a>
+            <a class="carousel-item" href="#two!"><img src="http://lorempixel.com/800/400/food/2"></a>
+            <a class="carousel-item" href="#three!"><img src="http://lorempixel.com/800/400/food/3"></a>
+            <a class="carousel-item" href="#four!"><img src="http://lorempixel.com/800/400/food/4"></a>
+        </div>  
+          
       <h1 class="header center orange-text">ZAP</h1>
       <div class="row center">
         <h5 class="header col s12 light">Top rated security tool</h5>
